@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ai Robot LAB | 공식 홈페이지</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Pretendard', 'Arial', sans-serif;
+    background-color: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* 네비게이션 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #020617;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav h1 {
+    color: #38bdf8;
+    font-size: 24px;
+    margin: 0;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+nav ul li {
+    margin-left: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav ul li:hover {
+    color: #38bdf8;
+}
+
+/* 메인 히어로 섹션 */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+.hero h2 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+.hero span {
+    color: #38bdf8;
+}
+.hero p {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+/* 링크 버튼 그룹 (드라이브, 블로그, 인스타) */
+.link-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.btn-link {
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-drive { background: #34a853; color: white; } /* 구글 그린 */
+.btn-blog { background: #2db400; color: white; }  /* 네이버 그린 */
+.btn-insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; }
+.btn-link:hover { opacity: 0.8; transform: translateY(-3px); }
+
+/* 섹션 공통 스타일 */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #38bdf8;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 로드맵 섹션 (박사님 대응용) */
+.roadmap-container {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+.roadmap-item {
+    margin-bottom: 20px;
+    border-left: 3px solid #38bdf8;
+    padding-left: 20px;
+}
+.roadmap-item strong { color: #38bdf8; font-size: 18px; }
+
+/* 프로젝트 카드 */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    background: #1e293b;
+    padding: 25px;
+    width: 280px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid #334155;
+}
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #38bdf8;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #020617;
+    color: #64748b;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Ai Robot LAB</h1>
+    <ul>
+        <li onclick="location.href='#intro'">소개</li>
+        <li onclick="location.href='#roadmap'">로드맵</li>
+        <li onclick="location.href='#project'">프로젝트</li>
+        <li onclick="location.href='#team'">팀원</li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h2>AI + Robotics<br><span>Ai Robot LAB</span></h2>
+    <p>미래 기술을 직접 구현하고 창업을 꿈꾸는 팀</p>
+    
+    <!-- 외부 링크 버튼 세트 -->
+    <div class="link-group">
+        <a href="https://drive.google.com/drive/u/2/home" class="btn-link btn-drive" target="_blank">📁 자료실 (Drive)</a>
+        <a href="https://blog.naver.com/arl8272x200" class="btn-link btn-blog" target="_blank">📝 활동 기록 (Blog)</a>
+        <a href="https://www.instagram.com/dohun0287546?igsh=MWNpMzJ5NGZ4ZDhvYQ==" class="btn-link btn-insta" target="_blank">📸 소식 (Insta)</a>
+    </div>
+</section>
+
+<!-- 로드맵 섹션: 최윤용 박사님 지적사항 반영 -->
+<section class="section" id="roadmap">
+    <h2>📅 2026 프로젝트 로드맵</h2>
+    <div class="roadmap-container">
+        <div class="roadmap-item">
+            <strong>5월: 추진안 확정 및 팀 구성</strong>
+            <p>개별 프로젝트(스마트 리사이클링, AI 어시스턴트 등) 세부 추진안 박사님 검토 및 팀원 배정</p>
+        </div>
+        <div class="roadmap-item">
+            <strong>6월: 1차 프로토타입 개발</strong>
+            <p>FastAPI 기반 서버 아키텍처 구축 및 ROS2 센서 데이터 연동 테스트</p>
+        </div>
+        <div class="roadmap-item">
+            <strong>7~8월: 필드 테스트 및 고도화</strong>
+            <p>실제 환경에서의 자율주행 및 AI 모델 성능 검증, 창업 기획안 구체화</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="project">
+    <h2>🚀 주요 프로젝트</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>♻️ 스마트 리사이클링</h3>
+            <p>객체 인식 AI를 활용한 자동 분리수거 로봇 시스템</p>
+        </div>
+        <div class="card">
+            <h3>🤖 AI 어시스턴트</h3>
+            <p>LLM 기반의 학과 정보 및 동아리 가이드 챗봇</p>
+        </div>
+        <div class="card">
+            <h3>🎮 게임 분석 AI</h3>
+            <p>플레이 데이터 분석을 통한 개인 맞춤형 코칭 솔루션</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="team">
+    <h2>👥 우리 팀</h2>
+    <p>현재 <strong>회장 조도훈</strong> 외 <strong>10명</strong>의 정예 팀원이 함께하고 있습니다.</p>
+</section>
+
+<footer>
+    <p>© 2026 Ai Robot LAB. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
